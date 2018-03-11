@@ -10,41 +10,229 @@
 <MainScreen>:
     name: 'main'
     GridLayout:
-        rows: 3
+        rows: 5
         canvas:
             Color:
                 rgba:  230/255,233/255,239/255,1
             Rectangle:
                 size: self.size
+        Button:
+            background_normal: 'CompleteReciptLogo2.png'
+            background_down: 'CompleteReciptLogo2.png'
+            size: 15, 53.1
+            pos: root.x - 7.5, root.y - 26.55
         Label:
-            text: "ReceiptBag"
-            pos_hint: {"x": .35, "top": 1}
+            text: ''
+        Label:
+            text: "Expenditure Breakdown"
+            font_size: 15
+            color: 58/255, 97/255, 220/255,1
         GridLayout:
             cols: 3
             Label:
                 text: ''
                 size_hint: 1/6, .7
+           # GridLayout:
+            #    cols: 3
             Button:
-                background_normal: 'piechart7.png'
-                background_down: 'piechart7.png'
+                background_normal: 'piechart4.png'
+                background_down: 'piechart4.png'
                 size_hint: 2/3, .7
             Label:
                 text: ''
                 size_hint: 1/6, .7
+        Button:
+            text: 'To Receipt History'
+            font_size: 20
+            background: ''
+            on_release: app.root.current = 'receipts'
+
+<FirstScreen>:
+    name: 'b1'
+    GridLayout:
+        cols:2
+        Button:
+            text: "Barnes and Noble"
+            on_release: app.root.current = 's1'
+        Button:
+            background_normal: 'receipt1.jpg'
+            background_down: 'receipt1.jpg'
+            on_release: app.root.current = 'receipts'
+            size: self.size
+
+<S1Individual>
+    name: 's1'
+    GridLayout:
+        rows: 5
+        canvas:
+            Color:
+                rgba:  230/255,233/255,239/255,1
+            Rectangle:
+                size: self.size
+        Button:
+            background_normal: 'CompleteReciptLogo2.png'
+            background_down: 'CompleteReciptLogo2.png'
+            size: 15, 53.1
+            pos: root.x - 7.5, root.y - 26.55
         Label:
             text: ''
+        Label:
+            text: "Barnes and Noble Breakdown"
+            font_size: 15
+            color: 58/255, 97/255, 220/255,1
+        GridLayout:
+            cols: 3
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+           # GridLayout:
+            #    cols: 3
+            Button:
+                background_normal: 'piechart1.png'
+                background_down: 'piechart1.png'
+                size_hint: 2/3, .7
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+        Button:
+            text: 'To Receipt History'
+            font_size: 20
+            background: ''
+            on_release: app.root.current = 'receipts'
 
+<SecondScreen>:
+    name: 'b2'
+    GridLayout:
+        cols:2
+        Button:
+            text: "Papa John's"
+            on_release: app.root.current = 's2'
+        Button:
+            background_normal: 'receipt2.jpg'
+            background_down: 'receipt2.jpg'
+            on_release: app.root.current = 'receipts'
+            size: self.size
+
+<S2Individual>
+    name: 's2'
+    GridLayout:
+        rows: 5
+        canvas:
+            Color:
+                rgba:  230/255,233/255,239/255,1
+            Rectangle:
+                size: self.size
+        Button:
+            background_normal: 'CompleteReciptLogo2.png'
+            background_down: 'CompleteReciptLogo2.png'
+            size: 15, 53.1
+            pos: root.x - 7.5, root.y - 26.55
+        Label:
+            text: ''
+        Label:
+            text: "Papa Johns Breakdown"
+            font_size: 15
+            color: 58/255, 97/255, 220/255,1
+        GridLayout:
+            cols: 3
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+           # GridLayout:
+            #    cols: 3
+            Button:
+                background_normal: 'piechart2.png'
+                background_down: 'piechart2.png'
+                size_hint: 2/3, .7
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+        Button:
+            text: 'To Receipt History'
+            font_size: 20
+            background: ''
+            on_release: app.root.current = 'receipts'
+
+<ThirdScreen>:
+    name: 'b3'
+    GridLayout:
+        cols:2
+        Button:
+            text: "Surfside"
+            on_release: app.root.current = 's3'
+        Button:
+            background_normal: 'receipt3.jpg'
+            background_down: 'receipt3.jpg'
+            on_release: app.root.current = 'receipts'
+            size: self.size
+
+<S3Individual>
+    name: 's3'
+    GridLayout:
+        rows: 5
+        canvas:
+            Color:
+                rgba:  230/255,233/255,239/255,1
+            Rectangle:
+                size: self.size
+        Button:
+            background_normal: 'CompleteReciptLogo2.png'
+            background_down: 'CompleteReciptLogo2.png'
+            size: 15, 53.1
+            pos: root.x - 7.5, root.y - 26.55
+        Label:
+            text: ''
+        Label:
+            text: "Surfside Breakdown"
+            font_size: 15
+            color: 58/255, 97/255, 220/255,1
+        GridLayout:
+            cols: 3
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+           # GridLayout:
+            #    cols: 3
+            Button:
+                background_normal: 'piechart3.png'
+                background_down: 'piechart3.png'
+                size_hint: 2/3, .7
+            Label:
+                text: ''
+                size_hint: 1/6, .7
+        Button:
+            text: 'To Receipt History'
+            font_size: 20
+            background: ''
+            on_release: app.root.current = 'receipts'
+
+<FourthScreen>:
+    name: 'b4'
 
 
 <ReceiptScreen>:
     name: 'receipts'
-    BoxLayout:
+    GridLayout:
+        rows: 5
+        canvas:
+            Color:
+                rgba: 230/255,233/255,239/255,1
+            Rectangle:
+                size: self.size
         Label:
-            text: 'Welcome!'
-            color: 80/255, 66/255, 244/255, 1
-    BoxLayout:
+            text: 'Receipt History'
+            font_size: 30
         Button:
-            text: 'To Home Screen'
-            color: 80/255, 66/255, 244/255, 1
+            text: 'Receipt 1'
+            on_release: app.root.current = 'b1'
+        Button:
+            text: 'Receipt 2'
+            on_release: app.root.current=  'b2'
+        Button:
+            text: 'Receipt 3'
+            on_release: app.root.current = 'b3'
+        Button:
+            text: 'Back Home'
             on_release: app.root.current = 'main'
+
 

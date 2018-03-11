@@ -1,21 +1,20 @@
 import os
 import matplotlib.pyplot as plt
-import testdata as expensedata
+import ReceiptBagBackend as dataaa
+
+
 
 #takes cost data and finds average costs
-costs = expensedata.costs
-totalcost = 0
-for i in costs:
-    totalcost += i
-percentagecost = []
-for i in costs:
-    percentagecost.append(i/totalcost)
+costs = [9.85, 26.32, 30.97]
+totalcosts = 67.14
+percentagecost = [9.85/67.14, 26.32/67.14, 30.97/67.14]
 
+print(percentagecost)
 
 # Pie chart
-labels = expensedata.costtypes
+labels = dataaa.items
 count = 0
-labels1 = []
+labels1 = ["Surfside", "Papa Johns", "Barnes and Noble"]
 for i in labels:
     labels1.append(labels[count].title())
     count += 1
@@ -35,6 +34,6 @@ ax1.axis('equal')
 fig1.set_facecolor((230/255,233/255,239/255,1))
 plt.tight_layout()
 
-#Saves file ONLY COMMENT LINE 39 OUT THE FIRST TIME YOU RUN THIS CODE!!!!!!!!!
-#os.remove("/Users/Matthew/Documents/Receipt-Bag/piechart1.png")
-fig1.savefig('piechart1.png', facecolor=fig1.get_facecolor(), edgecolor='none')
+#Saves file
+#os.remove('''C:\Users\Jared\PycharmProjects\ReceiptBag\piechart1.png''')
+fig1.savefig('piechart4.png', facecolor=fig1.get_facecolor(), edgecolor='none')

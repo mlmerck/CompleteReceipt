@@ -1,0 +1,70 @@
+<Button>:
+   font_size: 30
+   color: 0,1,0,1
+<Label>:
+   font_size: 30
+   color: 58/255,97/255,255/255,1
+   size_hint: .3,.2
+
+
+<MainScreen>:
+   name: 'main'
+   GridLayout:
+       rows: 5
+       canvas:
+           Color:
+               rgba:  230/255,233/255,239/255,1
+           Rectangle:
+               size: self.size
+       Label:
+           text: "CompleteReceipt"
+           pos_hint: {"x": .35, "top": 1}
+       Label:
+           text: "Expenditure Breakdown"
+           font_size: 15
+           color: 58/255, 97/255, 220/255,1
+       GridLayout:
+           cols: 3
+           Label:
+               text: ''
+               size_hint: 1/6, .7
+           GridLayout:
+               cols: 3
+               Button:
+                   background_normal: 'piechart1.png'
+                   background_down: 'piechart1.png'
+                   size_hint: 2/3, .7
+           Label:
+               text: ''
+               size_hint: 1/6, .7
+       Label:
+           text: ''
+       Button:
+           text: 'To Receipt History'
+           on_release: app.root.current = 'receipts'
+
+
+
+<ReceiptScreen>:
+   name: 'receipts'
+   GridLayout:
+       rows: 2
+       canvas:
+           Color:
+               rgba: 230/255,233/255,239/255,1
+           Rectangle:
+               size: self.size
+       Label:
+           text: 'Receipt History'
+           color: 58/255, 97/255, 255/255, 1
+       GridLayout:
+           rows: 2
+           GridLayout:
+               cols: 3
+               Button:
+                   text: 'To Home Screen'
+                   color: 80/255, 66/255, 244/255, 1
+                   on_release: app.root.current = 'main'
+           Label:
+               text: 'Receipt 1'
+               color: 0,0,0,1

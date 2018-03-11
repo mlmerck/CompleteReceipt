@@ -1,0 +1,18 @@
+def findAddress(lineStrings): #code to find the address of the store
+   variable = False
+   startPoint=1
+   lines=0
+   if storeName==lineStrings[1]:
+       startPoint=2
+   for lines in range(startPoint, 5):
+       for place in range(1, (len(lineStrings[lines])) - 2):
+           if (lineStrings[lines][place - 1] == ' ' and not lineStrings[lines][place].isdigit() and not lineStrings[lines][place + 1].isdigit() and lineStrings[lines][place + 2] == ' '):
+               variable = True
+               break
+
+       if variable == True:
+           break
+   if lines==1:
+       return lineStrings[startPoint]
+   else:
+       return lineStrings[lines-1]+" "+lineStrings[lines]

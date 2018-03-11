@@ -1,0 +1,23 @@
+lineStrings = "Barnes & Noble Booksellers #2937\n12193 Fair Lakes Promenade Drive\nFairfax, VA 22033\n703-278-0300\nSTR:2937 REG:006 TRN:2944 CSHR:Lindsey B\n"
+
+def findStoreName(lineStrings):
+    StoreName = lineStrings[0]
+
+def findAddress(lineStrings):
+   address = ""
+   variable = False
+   for lines in range(1, 3):
+       for place in range(1, (len(lineStrings[lines])) - 2):
+           if (lineStrings[lines][place - 1] == ' ' and not lineStrings[lines][place].isdigit() and not
+           lineStrings[lines][place + 1].isdigit() and lineStrings[lines][place + 2] == ' '):
+               address = address + lineStrings[lines]
+               variable = True
+               break
+
+       if variable == True:
+           break
+       else:
+           address = address + lineStrings[lines] + ", "
+   return address
+
+
