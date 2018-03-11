@@ -35,6 +35,6 @@ ax1.axis('equal')
 fig1.set_facecolor((230/255,233/255,239/255,1))
 plt.tight_layout()
 
-#Saves file
-os.remove("/Users/Matthew/Documents/Receipt-Bag/piechart1.png")
+#Saves file ONLY COMMENT LINE 39 OUT THE FIRST TIME YOU RUN THIS CODE!!!!!!!!!
+#os.remove("/Users/Matthew/Documents/Receipt-Bag/piechart1.png")
 fig1.savefig('piechart1.png', facecolor=fig1.get_facecolor(), edgecolor='none')
