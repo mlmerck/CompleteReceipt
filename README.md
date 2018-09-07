@@ -1,2 +1,2 @@
 # Receipt-Bag
-HackTJ Project
+This is our project for the HACKTJ 2018 Event. Complete reciept allows users to photograph their receipt, then using Google's Cloud Vision API, our program collects data and presents it to the user in a friendly way. Over time as receipts are a collected by the user, the program calculates the amount of money spent at each venue which can be broken down further into looking at what items are purchased most frequently.
